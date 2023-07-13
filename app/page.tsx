@@ -15,10 +15,6 @@ const optimizelyClient: ReactSDKClient = createInstance({
   sdkKey: "DSm2zAkSJkAdTYMzQuN6E",
 });
 
-function isClientValid() {
-  return optimizelyClient.getOptimizelyConfig() !== null;
-}
-
 const userIds: string[] = [];
 while (userIds.length < 10) {
   // to get rapid demo results, generate an array of random users. Each user always sees the same variation unless you reconfigure the flag rule.
@@ -40,6 +36,10 @@ function Page() {
       }
     });
   }, []);
+
+  const isClientValid = (): boolean => {
+    return optimizelyClient.getOptimizelyConfig() !== null;
+  };
 
   const setProjectID = (optimizelyConfig: OptimizelyConfig | null): void => {
     if (!optimizelyConfig) return;
