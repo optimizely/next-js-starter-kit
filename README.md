@@ -1,6 +1,6 @@
 # Optimizely Next.js Starter Kit
 
-The goal of this repo is to get you to a running NextJS app with Optimizely as fast as possible.
+The goal of this repo is to get you to a running NextJS app with [Optimizely React SDK](https://github.com/optimizely/react-sdk) as fast as possible.
 
 ## Prerequisites
 
